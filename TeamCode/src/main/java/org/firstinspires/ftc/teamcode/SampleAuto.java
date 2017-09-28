@@ -103,11 +103,12 @@ public class SampleAuto extends LinearOpMode {
             // rightPower = -gamepad1.right_stick_y ;
 
             // Send calculated power to wheels
-            motorLeft.setPower(leftPower / 2);      // Turn on
-            motorRight.setPower(rightPower / 2);    // Turn on
+            // Full Speed: 1
+            motorLeft.setPower(0.5);      // Turn left on
+            motorRight.setPower(0.5);    // Turn right on
             sleep(200);
-            motorLeft.setPower(0);      // Reduces Speed
-            motorRight.setPower(0);    // Reduces Speed
+            motorLeft.setPower(0);                  // Turn left off
+            motorRight.setPower(0);                 // Turn right
 
 
             // Show the elapsed game time and wheel power.
